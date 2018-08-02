@@ -1,19 +1,19 @@
 /*!
 Theme Name: Humescores
-Theme URI: http://underscores.me/
+Theme URI: https://github.com/mor10/humescores/
 Author: Morten Rand-Hendriksen
-Author URI: dalekeys.ca
-Description: Portfolio
+Author URI: https://mor10.com/courses
+Description: A new theme for a new time. This theme showcases the best of WordPress and Underscores and is the project for the Building Themes From Scratch Using Underscores course at LinkedIn Learning and Lynda.com.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: portfolio
+Text Domain: humescores
 Tags:
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-portfolio is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Humescores is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -264,13 +264,13 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: "PT Serif", Georgia, "Times New Roman", serif;
+	font-family: "PT Serif", Georgia, Cambria, "Times New Roman", Times, serif;
 	font-size: 18px;
 	font-size: 1.125rem;
 	line-height: 1.5;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
 	body,
 	button,
 	input,
@@ -283,7 +283,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
-	font-family: "Source Sans Pro", "Lucida Sans Unicode", "Lucida Sans Unicode", "Lucida Sans ", Arial, sans-serif;
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
 }
 
 h1 {
@@ -291,7 +291,7 @@ h1 {
 }
 
 h2 {
-	font-size: 2,6em;
+	font-size: 2.6em;
 }
 
 h3 {
@@ -426,7 +426,7 @@ img {
 }
 
 figure {
-	margin: 1em 0;
+	margin: 0;
 	/* Extra wide images within figure tags don't overflow the content area. */
 }
 
@@ -710,8 +710,6 @@ a:hover, a:active {
 .entry-content:after,
 .comment-content:before,
 .comment-content:after,
-.site-header:before,
-.site-header:after,
 .site-content:before,
 .site-content:after,
 .site-footer:before,
@@ -724,7 +722,6 @@ a:hover, a:active {
 .clear:after,
 .entry-content:after,
 .comment-content:after,
-.site-header:after,
 .site-content:after,
 .site-footer:after {
 	clear: both;
@@ -734,7 +731,7 @@ a:hover, a:active {
 # Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-## Global layout
+## Global layouts
 --------------------------------------------------------------*/
 .site-content {
 	padding: 1em;
@@ -744,6 +741,96 @@ a:hover, a:active {
 	.site-content {
 		padding: 2em;
 	}
+}
+
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+.header-image img {
+	display: block;
+	width: 100vw;
+	max-height: 60vh;
+	overflow: hidden;
+}
+
+.site-header {
+	position: relative;
+	padding: 1em;
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	color: #fff;
+	background-color: #141414;
+}
+
+@media screen and (min-width: 600px) {
+	.site-header {
+		padding: 1em 2em;
+	}
+}
+
+.site-branding {
+	min-height: 65px;
+}
+
+.site-title {
+	margin: 0;
+	padding: 0;
+	font-size: 1.6em;
+	font-weight: 900;
+	line-height: 1em;
+}
+
+.site-title a {
+	color: white;
+	text-decoration: none;
+}
+
+.site-title a:hover, .site-title a:focus {
+	text-decoration: underline;
+}
+
+.site-description {
+	margin: 0;
+	font-size: .9em;
+	font-style: italic;
+	font-weight: 100;
+}
+
+@media screen and (min-width: 900px) {
+	.site-header {
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-pack: justify;
+		    justify-content: space-between;
+	}
+	.site-branding {
+		width: 35%;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex: 1 0 auto;
+		    flex: 1 0 auto;
+	}
+	.site-navigation {
+		width: 45%;
+	}
+}
+
+.custom-logo-link {
+	margin-right: 1em;
+}
+
+.custom-logo-link img {
+	display: block;
+	max-width: 90px;
+}
+
+.site-brand__text {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	    flex-direction: column;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	height: 65px;
 }
 
 /*--------------------------------------------------------------
